@@ -13,7 +13,15 @@ namespace DotaBuildsBackend.utilities
 
         public bool IsWon(RecentMatch Match)
         {
-            return Match.RadiantWin && (Match.PlayerSlot < dataFactory.GetRadiantIndex());
+            if (Match.RadiantWin)
+            {
+                return Match.PlayerSlot < dataFactory.GetRadiantIndex();
+            }
+            else
+            {
+                return Match.PlayerSlot > dataFactory.GetRadiantIndex();
+            }
+           
         }
     }
 }
