@@ -8,9 +8,9 @@ namespace DotaBuildsBackend.utilities
     public class DotaRemoteRepoManager
     {
 
-        public String GetMatchApiRemoteUrl()
+        public String GetMatchApiRemoteUrl(string matchId)
         {
-            return "https://api.opendota.com/api/matches/";
+            return "https://api.opendota.com/api/matches/" + matchId;
         }
 
         public String GetHerosApiRemoteUrl()

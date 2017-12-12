@@ -48,6 +48,7 @@ namespace DotaBuildsBackend.utilities
         [JsonProperty("first_blood_time")]
         public long FirstBloodTime { get; set; }
 
+        //necessary details
         [JsonProperty("game_mode")]
         public long GameMode { get; set; }
 
@@ -60,6 +61,7 @@ namespace DotaBuildsBackend.utilities
         [JsonProperty("lobby_type")]
         public long LobbyType { get; set; }
 
+        //necessary details
         [JsonProperty("match_id")]
         public long MatchId { get; set; }
 
@@ -137,7 +139,7 @@ namespace DotaBuildsBackend.utilities
 
         [JsonProperty("additional_units")]
         public object AdditionalUnits { get; set; }
-
+    
         [JsonProperty("assists")]
         public long Assists { get; set; }
 

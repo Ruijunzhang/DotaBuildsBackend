@@ -14,5 +14,6 @@ namespace DotaBuildsBackend.utilities
         public long death { get; set; }
         public long gpm { get; set; }
         public long assist { get; set; }
+        public long matchId { get; set; }
     }
 }

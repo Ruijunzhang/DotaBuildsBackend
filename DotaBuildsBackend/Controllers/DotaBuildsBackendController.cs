@@ -44,6 +44,7 @@ namespace DotaBuildsBackend.Controllers
                     playerMatch.hero = await dataFactory.GetHerosById(match.HeroId);
                     playerMatch.isWon = matchHandler.IsWon(match);
                     playerMatch.kill = match.Kills;
+                    playerMatch.matchId = match.MatchId;
 
                     returnMatchs.Add(playerMatch);
                 }
@@ -61,37 +62,26 @@ namespace DotaBuildsBackend.Controllers
 
         }
 
-        [HttpGet, Route("getmatch")]
-        public async Task<object> GetMatch(string matchId, string userId)
+
+        [HttpGet, Route("GetMatchDetails")]
+        public async Task<object> GetMatchDetails(string matchId)
         {
             try
             {
-                HttpResponseMessage response = await client.GetAsync(dotaRemoteRepoManager.GetMatchApiRemoteUrl() + matchId);
+                HttpResponseMessage response = await client.GetAsync(dotaRemoteRepoManager.GetMatchApiRemoteUrl(matchId));
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
 
-                var match = JsonConvert.DeserializeObject<OpenDoTaModel>(responseBody);
+                OpenDoTaModel recentMatchs = OpenDoTaModel.FromJson(responseBody);
 
-                Match returnMatch = new Match();
+                var json = JsonConvert.SerializeObject(recentMatchs, Formatting.Indented,
+                    new JsonSerializerSettings { ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver() });
 
-                foreach (Player player in match.Players)
-                {
-                    if(player.AccountId == Convert.ToInt64(userId)){
-                        //returnMatch.heroId = player.HeroId;
-                        returnMatch.death = player.Deaths;
-                        returnMatch.assist = player.Assists;
-                        returnMatch.gpm = player.GoldPerMin;
-                        returnMatch.kill = player.Kills;
-                        returnMatch.isWon = Convert.ToBoolean(Convert.ToInt16(player.Win));
-                    }
-                }
-
-
-                return Ok(returnMatch);
+                return Ok(json);
             }
             catch (HttpRequestException e)
             {
-                return Ok("no match");
+                return Ok("no match details found");
             }      
         
         }
