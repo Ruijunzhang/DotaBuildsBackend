@@ -1,0 +1,17 @@
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\bin\DotaBuildsBackend.dll.config
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\bin\DotaBuildsBackend.dll
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\bin\DotaBuildsBackend.pdb
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\bin\Newtonsoft.Json.dll
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\bin\System.Net.Http.Formatting.dll
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\bin\System.Web.Http.dll
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\bin\System.Web.Http.WebHost.dll
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\bin\Newtonsoft.Json.xml
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\bin\System.Net.Http.Formatting.xml
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\bin\System.Web.Http.xml
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\bin\System.Web.Http.WebHost.xml
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\obj\Release\DotaBuildsBackend.csprojResolveAssemblyReference.cache
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\obj\Release\DotaBuildsBackend.csproj.CoreCompileInputs.cache
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\obj\Release\DotaBuildsBackend.dll
+D:\Projects\DotaBuildsBackend\DotaBuildsBackend\obj\Release\DotaBuildsBackend.pdb
