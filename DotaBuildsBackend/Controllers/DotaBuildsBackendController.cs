@@ -9,6 +9,7 @@ using DotaBuildsBackend.utilities;
 using Newtonsoft.Json;
 using DotaBuildsBackend.Models;
 using DotaBuildsBackend.Models.RecentMatch;
+using System.Text;
 
 namespace DotaBuildsBackend.Controllers
 {
@@ -49,11 +50,11 @@ namespace DotaBuildsBackend.Controllers
                     returnMatchs.Add(playerMatch);
                 }
 
-                var json = JsonConvert.SerializeObject(returnMatchs, Formatting.Indented,
-                    new JsonSerializerSettings { ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver() });
-
-
-                return Ok(json);
+                return Json(returnMatchs,
+                    new JsonSerializerSettings {
+                        ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver(),
+                        Formatting = Formatting.Indented
+                    });
             }
             catch (HttpRequestException e)
             {
