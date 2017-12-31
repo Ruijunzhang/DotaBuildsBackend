@@ -8,7 +8,7 @@ namespace DotaBuildsBackend.utilities
 {
     public class Match
     {
-        public Hero hero { get; set; }
+        public Hero myHero { get; set; }
         public bool isWon { get; set; }
         public long kill { get; set; }
         public long death { get; set; }

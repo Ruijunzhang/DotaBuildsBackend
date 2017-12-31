@@ -42,7 +42,7 @@ namespace DotaBuildsBackend.Controllers
                     playerMatch.assist = match.Assists;
                     playerMatch.death = match.Deaths;
                     playerMatch.gpm = match.GoldPerMin;
-                    playerMatch.hero = await dataFactory.GetHerosById(match.HeroId);
+                    playerMatch.myHero = await dataFactory.GetHerosById(match.HeroId);
                     playerMatch.isWon = matchHandler.IsWon(match);
                     playerMatch.kill = match.Kills;
                     playerMatch.matchId = match.MatchId;
